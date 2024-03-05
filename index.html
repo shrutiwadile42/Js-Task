@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <title>Login Form</title>
+</head>
+
+<body>
+     
+    
+    <div class="main">
+        <div class="background"></div> 
+        <div class="main-1">
+
+            <label class="label" for="alpha">Username<span style="color: red;">*</span></label><br>
+            <input class="input" type="text" name="alphatext" id="alpha" placeholder="Enter alpha"><br>
+            <span class="validation" id="alpha-span"></span>
+            <br><br>
+
+            <label class="label" for="email">Email<span style="color: red;">*</span></label><br>
+            <input class="input" type="email" oninput="emailInput.value = emailInput.value.toLowerCase();" name="email"
+                id="email" placeholder="Enter email address"><br>
+            <span class="validation" id="email-span"></span>
+            <br><br>
+
+            <label class="label" for="email">ConfirmEmail<span style="color: red;">*</span></label><br>
+            <input class="input" type="email" oninput="emailInput.value = emailInput.value.toLowerCase();" name="email"
+                id="emailconfirm" placeholder="Enter email address"><br>
+            <span class="validation" id="emailv"></span>
+            <br><br>
+
+        </div>
+
+        <div class="main-2">
+            <label class="label" for="pas">Password<span style="color: red;">*</span></label><br>
+            <input class="input" type="password" name="password" id="password" placeholder="Enter password"><br>
+            <button class="visible" id="tog-btn">VIEW</button>
+            <span class="validation" id="pass-span"></span>
+            <br><br>
+
+            <label class="label" for="countrycode phoneno">Phone Number <span style="color: red;">*</span></label><br>
+            <select name="countrycode" id="countrycode">
+                <option value="+91">+91</option>
+                <option value="+93">+93</option>
+                <option value="+95">+95</option>
+                <option value="+92">+92</option>
+            </select>
+            <input class="phone" type="number" name="phoneno" id="phoneno" placeholder="Enter Phone Number"><br>
+            <span class="validation" id="phone-span"></span>
+            <br><br>
+
+            <label class="label" for="dob">Date of Birth Validation<span style="color: red;">*</span></label><br>
+
+            <input class="input" type="text" id="dob" name="dob" placeholder="YYYY-MM-DD"><br>
+            <span class="validation" id="date-span"></span>
+            <br><br>
+
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">I accept the terms and conditions</label><br>
+            <span id="termsError" style="color: red;"></span>
+
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div><br>
+
+            <button type="submit" class="submit" onclick="submit()">Submit</button>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
